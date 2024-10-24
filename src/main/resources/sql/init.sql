@@ -1,0 +1,9 @@
+CREATE TABLE users (
+   id BIGSERIAL PRIMARY KEY,  -- 使用 BIGSERIAL 来实现自动递增
+   name VARCHAR(100),
+   age INT,
+   email VARCHAR(100)
+);
+CREATE USER lst WITH password '123456';
+ALTER USER lst WITH SUPERUSER;
+GRANT ALL PRIVILEGES ON DATABASE batchdb TO lst;
